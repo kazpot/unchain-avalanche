@@ -1,31 +1,34 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
-import Layout from "../components/layout/Layout";
+import Container from "../components/Container/Container";
+import { useWallet } from "../hooks/useWallet";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  return (
-    <Layout home>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1 className={styles.title}>Welcome to Messenger 📫</h1>
-          <div className={styles.card}>
-            <Link href="/message/SendMessagePage">
-              <h2>send &rarr;</h2>
-            </Link>
-            <p>send messages and avax to other accounts</p>
-          </div>
+  const { currentAccount, connectWallet } = useWallet();
 
-          <div className={styles.card}>
-            <Link href="/message/ConfirmMessagePage">
-              <h2>check &rarr;</h2>
-            </Link>
-            <p>Check messages from other accounts</p>
+  return (
+    <div className={styles.pageBody}>
+      <div className={styles.navBar}>
+        <div className={styles.rightHeader}>
+          <Image alt="Picture of icon" src="/bird.png" width={40} height={30} />
+          <div className={styles.appName}> Miniswap </div>
+        </div>
+        {currentAccount === undefined ? (
+          <div className={styles.connectBtn} onClick={connectWallet}>
+            {" "}
+            Connect to wallet{" "}
           </div>
-        </main>
+        ) : (
+          <div className={styles.connected}>
+            {" "}
+            {"Connected to " + currentAccount}{" "}
+          </div>
+        )}
       </div>
-    </Layout>
+      <Container currentAccount={currentAccount} />
+    </div>
   );
 };
 
