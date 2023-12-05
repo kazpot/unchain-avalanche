@@ -9,9 +9,9 @@ import { getEthereum } from "../utils/ethereum";
 import UsdcArtifact from "../utils/USDCToken.json";
 import JoeArtifact from "../utils/USDCToken.json";
 
-export const UsdcAddress = "コントラクトのデプロイ先アドレス";
-export const JoeAddress = "コントラクトのデプロイ先アドレス";
-export const AmmAddress = "コントラクトのデプロイ先アドレス";
+export const UsdcAddress = "0x96531723D1bE9002b2002F5469e90547937Dfa17";
+export const JoeAddress = "0xFCd2058bDa35Dd74A30892c2b999DFb3E7e86B91";
+export const AmmAddress = "0x572A0a02c436c70433A71D3B9053C5c1Ef928138";
 
 export type TokenType = {
   symbol: string;
