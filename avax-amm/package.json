@@ -1,7 +1,7 @@
 {
-  "name": "avax-messenger",
+  "name": "avax-amm",
   "version": "1.0.0",
-  "description": "Message dapp that allows text and tokens (AVAX) to be exchanged.",
+  "description": "AMM dApp",
   "private": true,
   "workspaces": {
     "packages": [
