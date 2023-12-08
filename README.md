@@ -19,7 +19,7 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bas
 ```
 
 Windows の場合
-以下の URL から公式ドキュメントに沿ってインストーラー(setup.exe)をダウンロード
+以下の URL の Assets からインストーラー(nvm-setup.exe)をダウンロード
 https://github.com/coreybutler/nvm-windows/releases/tag/1.1.12
 
 参考
