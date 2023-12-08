@@ -5,6 +5,7 @@
   "scripts": {
     "deploy": "npx hardhat run scripts/deploy.ts --network fuji",
     "cp": "yarn cp:typechain && yarn cp:artifact",
+    "typechain": "npx hardhat typechain",
     "cp:typechain": "cp -r typechain-types ../client/",
     "cp:artifact": "cp artifacts/contracts/ERC20Tokens.sol/USDCToken.json artifacts/contracts/ERC20Tokens.sol/JOEToken.json artifacts/contracts/AMM.sol/AMM.json ../client/utils/",
     "test": "npx hardhat test"
@@ -13,22 +14,20 @@
     "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@openzeppelin/contracts": "^4.3.2",
-    "@typechain/ethers-v5": "^8.0.5",
-    "@typechain/hardhat": "^3.1.0",
+    "@openzeppelin/contracts": "^4.7.3",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^17.0.8",
     "chai": "^4.3.4",
-    "dotenv": "^10.0.0",
+    "dotenv": "^16.0.2",
     "ethereum-waffle": "^3.4.0",
-    "ethereumjs-util": "^7.1.0",
     "ethers": "5.7.1",
-    "hardhat": "^2.8.2",
-    "hardhat-gas-reporter": "^1.0.7",
-    "husky": "^7.0.4",
-    "ts-node": "^10.4.0",
-    "typechain": "^6.1.0",
-    "typescript": "^4.5.4"
+    "hardhat": "^2.11.2",
+    "hardhat-gas-reporter": "^1.0.8",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0",
+    "typescript": "^5.3.3"
   }
 }

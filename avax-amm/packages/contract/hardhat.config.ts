@@ -2,6 +2,7 @@ import * as dotenv from "dotenv"; // 環境構築時にこのパッケージは�
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-waffle";
+import "@typechain/hardhat";
 
 // .envファイルから環境変数をロードします。
 dotenv.config();
