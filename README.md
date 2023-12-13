@@ -15,9 +15,22 @@ avax-amm
 - https://code.visualstudio.com/download
 
 - スマートコントラクト開発におすすめなエクステンション
-  - Solidity by juanblanco
-  - Solidity + Hardhat by nomic foundation
+
+  - Solidityby nomic foundation (Solidity and Hardhat support by the Hardhat team)
   - Prettier
+
+- Solidity 自動フォーマットの設定 (contract の workspace の設定が終わって Solidity ファイルを作成した後)
+
+  - packages/contract の下の package.json に以下を追加して`yarn install`
+
+    ```
+        "prettier": "^3.1.1",
+        "prettier-plugin-solidity": "^1.2.0",
+    ```
+
+  - Solidity ファイル内で右クリックメニューから `Format Document With...`を選択
+    - Configure Default Formatter...を選択
+    - Solidity を選択
 
 ### 2. git のインストール
 

@@ -48,12 +48,9 @@ contract AMM {
     }
 
     // 引数のトークンとペアのトークンのコントラクトを返します。
-    function _pairToken(IERC20 token)
-        private
-        view
-        validToken(token)
-        returns (IERC20)
-    {
+    function _pairToken(
+        IERC20 token
+    ) private view validToken(token) returns (IERC20) {
         if (token == _tokenX) {
             return _tokenY;
         }
@@ -61,13 +58,10 @@ contract AMM {
     }
 
     // 引数のトークンの量に値するペアのトークンの量を返します。
-    function getEquivalentToken(IERC20 inToken, uint256 amountIn)
-        public
-        view
-        activePool
-        validToken(inToken)
-        returns (uint256)
-    {
+    function getEquivalentToken(
+        IERC20 inToken,
+        uint256 amountIn
+    ) public view activePool validToken(inToken) returns (uint256) {
         IERC20 outToken = _pairToken(inToken);
 
         return (totalAmount[outToken] * amountIn) / totalAmount[inToken];
@@ -115,22 +109,17 @@ contract AMM {
     }
 
     // ユーザのシェアから引き出せるトークンの量を算出します。
-    function getWithdrawEstimate(IERC20 token, uint256 _share)
-        public
-        view
-        activePool
-        validToken(token)
-        returns (uint256)
-    {
+    function getWithdrawEstimate(
+        IERC20 token,
+        uint256 _share
+    ) public view activePool validToken(token) returns (uint256) {
         require(_share <= totalShare, "Share should be less than totalShare");
         return (_share * totalAmount[token]) / totalShare;
     }
 
-    function withdraw(uint256 _share)
-        external
-        activePool
-        returns (uint256, uint256)
-    {
+    function withdraw(
+        uint256 _share
+    ) external activePool returns (uint256, uint256) {
         require(_share > 0, "share cannot be zero!");
         require(_share <= share[msg.sender], "Insufficient share");
 
@@ -150,13 +139,10 @@ contract AMM {
     }
 
     // swap元のトークン量からswap先のトークン量を算出
-    function getSwapEstimateOut(IERC20 inToken, uint256 amountIn)
-        public
-        view
-        activePool
-        validToken(inToken)
-        returns (uint256)
-    {
+    function getSwapEstimateOut(
+        IERC20 inToken,
+        uint256 amountIn
+    ) public view activePool validToken(inToken) returns (uint256) {
         IERC20 outToken = _pairToken(inToken);
 
         uint256 amountInWithFee = amountIn * 997;
@@ -169,17 +155,11 @@ contract AMM {
     }
 
     // swap先のトークン量からswap元のトークン量を算出
-    function getSwapEstimateIn(IERC20 outToken, uint256 amountOut)
-        public
-        view
-        activePool
-        validToken(outToken)
-        returns (uint256)
-    {
-        require(
-            amountOut < totalAmount[outToken],
-            "Insufficient pool balance"
-        );
+    function getSwapEstimateIn(
+        IERC20 outToken,
+        uint256 amountOut
+    ) public view activePool validToken(outToken) returns (uint256) {
+        require(amountOut < totalAmount[outToken], "Insufficient pool balance");
         IERC20 inToken = _pairToken(outToken);
 
         uint256 numerator = 1000 * totalAmount[inToken] * amountOut;
