@@ -10,7 +10,29 @@ avax-amm
 
 # 環境設定ガイド
 
-### 1. nvm のインストール
+### 1. Visual Studio Code (VSCode のインストール)
+
+- https://code.visualstudio.com/download
+
+- スマートコントラクト開発におすすめなエクステンション
+  - Solidity by juanblanco
+  - Solidity + Hardhat by nomic foundation
+  - Prettier
+
+### 2. git のインストール
+
+- Mac の場合
+  - https://git-scm.com/download/mac
+- Windows の場合
+  - https://git-scm.com/download/win
+  - 参考ページ: https://www.curict.com/item/60/60bfe0e.html
+- proxy 環境で使用する場合
+
+```
+$ git config --global http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port
+```
+
+### 3. nvm のインストール
 
 Mac の場合
 
@@ -25,16 +47,26 @@ https://github.com/coreybutler/nvm-windows/releases/tag/1.1.12
 参考
 https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
 
-### 2. node と yarn のインストール
+### 4. node と yarn のインストール
 
 ```
 $ nvm install 18.17.0
 $ nvm use 18.17.0
 
+// node バージョンの確認、バージョンが表示されればOK
+$ node --version
+
 $ npm install -g yarn
 ```
 
-### 3. Core Wallet の 設定
+proxy 環境で使用する場合
+
+```
+$ npm -g config set proxy http://proxyserver:8080
+$ npm -g config set https-proxy http://proxyserver:8080
+```
+
+### 5. Core Wallet の 設定
 
 1. [インストール方法](https://support.avax.network/en/articles/6066879-core-extension-how-do-i-add-the-core-extension) を参考にして Core Wallet を Chrome Extension としてインストールする
 1. 左上のメニューから Advanced を選択して Testnet Mode をオンにする
