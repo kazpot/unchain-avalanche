@@ -16,7 +16,7 @@ avax-amm
 
 - スマートコントラクト開発におすすめなエクステンション
 
-  - Solidityby nomic foundation (Solidity and Hardhat support by the Hardhat team)
+  - Solidity by nomic foundation (Solidity and Hardhat support by the Hardhat team)
   - Prettier
 
 - Solidity 自動フォーマットの設定 (contract の workspace の設定が終わって Solidity ファイルを作成した後)
@@ -31,6 +31,8 @@ avax-amm
   - Solidity ファイル内で右クリックメニューから `Format Document With...`を選択
     - Configure Default Formatter...を選択
     - Solidity を選択
+    - 参考
+      - https://hardhat.org/hardhat-vscode/docs/formatting
 
 ### 2. git のインストール
 
