@@ -2,17 +2,9 @@
 
 ### 1. AMM
 
-チュートリアルページ
-
-https://app.unchain.tech/learn/AVAX-AMM/
-
-ソースコード
-
-avax-amm ディレクトリ
-
-参考動画
-
-[DeFi 勉強会 第 13 回 「AMM の仕組み初級編」](https://www.youtube.com/live/Ky1smrd2mDI?si=Avc7yl2-wc-PX7YW)
+チュートリアルページ: https://app.unchain.tech/learn/AVAX-AMM/
+ソースコード: avax-amm ディレクトリ
+参考動画: [DeFi 勉強会 第 13 回 「AMM の仕組み初級編」](https://www.youtube.com/live/Ky1smrd2mDI?si=Avc7yl2-wc-PX7YW)
 
 # 環境設定ガイド
 
