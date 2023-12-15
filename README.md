@@ -8,7 +8,7 @@ https://app.unchain.tech/learn/AVAX-AMM/
 
 ソースコード
 
-avax-amm
+avax-amm ディレクトリ
 
 参考動画
 
