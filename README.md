@@ -30,7 +30,7 @@
 
   - mac の場合: command + shift + p, windows の場合: ctl + shift + p
 
-    - ">"で始まる検索窓が出てくるtので、 settings で検索し、`Preferences: Open User Settings (JSON)`を選択
+    - ">"で始まる検索窓が出てくる t ので、 settings で検索し、`Preferences: Open User Settings (JSON)`を選択
     - settings.json 内に以下の設定を貼り付ける
 
     ```json
@@ -92,7 +92,17 @@ $ npm -g config set proxy http://proxyserver:8080
 $ npm -g config set https-proxy http://proxyserver:8080
 ```
 
-### 5. Core Wallet の 設定
+### 5. Hardhat の proxy 設定
+
+1. pacakges/contract の下に.env ファイルを作成する
+2. 以下の環境変数を設定
+
+```
+HTTP_PROXY=http://proxyserver:8080
+HTTPS_PROXY=http://proxyserver:8080
+```
+
+### 6. Core Wallet の 設定
 
 1. [インストール方法](https://support.avax.network/en/articles/6066879-core-extension-how-do-i-add-the-core-extension) を参考にして Core Wallet を Chrome Extension としてインストールする
 1. 左上のメニューから Advanced を選択して Testnet Mode をオンにする
