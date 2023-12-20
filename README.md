@@ -35,7 +35,6 @@
 
     ```json
     {
-      //...
       "editor.formatOnSave": true,
       "[solidity]": {
         "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
