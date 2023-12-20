@@ -28,9 +28,21 @@
         "prettier-plugin-solidity": "^1.2.0",
     ```
 
-  - Solidity ファイル内で右クリックメニューから `Format Document With...`を選択
-    - Configure Default Formatter...を選択
-    - Solidity を選択
+  - mac の場合: command + shift + p, windows の場合: ctl + shift + p
+
+    - settings で検索し、`Preferences: Open User Settings (JSON)`を選択
+    - settings.json 内に以下の設定を貼り付ける
+
+    ```json
+    {
+      //...
+      "editor.formatOnSave": true,
+      "[solidity]": {
+        "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+      }
+    }
+    ```
+
     - 参考
       - https://hardhat.org/hardhat-vscode/docs/formatting
 
