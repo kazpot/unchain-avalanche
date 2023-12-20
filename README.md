@@ -101,6 +101,10 @@ $ npm -g config set https-proxy http://proxyserver:8080
 1. Networks タブを選択
 1. Search で`LT0 Subnet`を検索して ⭐️ を選択してお気に入りに追加する
 
+### Solidity 基礎
+
+[Solidity 基礎](https://my-organization-23.gitbook.io/solidity-basic/)
+
 ### 公式ドキュメント
 
 [Solidity 公式ドキュメント](https://docs.soliditylang.org/en/latest)
