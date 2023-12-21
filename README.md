@@ -112,16 +112,14 @@ HTTPS_PROXY=http://proxyserver:8080
 
 ### Solidity 基礎
 
-[Solidity 基礎](https://my-organization-23.gitbook.io/solidity-basic/)
+- [Solidity 基礎](https://my-organization-23.gitbook.io/solidity-basic/)
 
 ### 役に立つツール
 
-[単位変換ツール](https://subnets.avax.network/tools/unit-converter/)
+- [単位変換ツール](https://subnets.avax.network/tools/unit-converter/)
 
 ### 公式ドキュメント
 
-[Solidity 公式ドキュメント](https://docs.soliditylang.org/en/latest)
-
-[Solidity 公式ドキュメント(和訳)](https://solidity-jp.readthedocs.io/ja/latest/)
-
-[OpenZeppelin 公式ドキュメント](https://docs.openzeppelin.com/contracts)
+- [Solidity 公式ドキュメント](https://docs.soliditylang.org/en/latest)
+- [Solidity 公式ドキュメント(和訳)](https://solidity-jp.readthedocs.io/ja/latest/)
+- [OpenZeppelin 公式ドキュメント](https://docs.openzeppelin.com/contracts)
