@@ -30,7 +30,7 @@
 
   - mac の場合: command + shift + p, windows の場合: ctl + shift + p
 
-    - ">"で始まる検索窓が出てくる t ので、 settings で検索し、`Preferences: Open User Settings (JSON)`を選択
+    - ">"で始まる検索窓が出てくるので、 settings で検索し、`Preferences: Open User Settings (JSON)`を選択
     - settings.json 内に以下の設定を貼り付ける
 
     ```json
