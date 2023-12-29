@@ -124,3 +124,4 @@ HTTPS_PROXY=http://proxyserver:8080
 - [Solidity 公式ドキュメント(和訳)](https://solidity-jp.readthedocs.io/ja/latest/)
 - [OpenZeppelin 公式ドキュメント](https://docs.openzeppelin.com/contracts)
 - [TESTING SMART CONTRACTS](https://ethereum.org/en/developers/docs/smart-contracts/testing/)
+- [SMART CONTRACT SECURITY](https://ethereum.org/en/developers/docs/smart-contracts/security/)
