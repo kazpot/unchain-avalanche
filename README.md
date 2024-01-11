@@ -2,7 +2,8 @@
 
 ### 1. AMM
 
-チュートリアルページ: https://app.unchain.tech/learn/AVAX-AMM/
+チュートリアルページold (2024年1月31日まで): https://app.unchain.tech/learn/AVAX-AMM/
+チュートリアルページnew: https://github.com/unchain-tech/UNCHAIN-projects/tree/main/docs/AVAX-AMM/ja
 
 ソースコード: avax-amm ディレクトリ
 
