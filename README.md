@@ -2,9 +2,9 @@
 
 ### 1. AMM
 
-チュートリアルページold (2024年1月31日まで): https://app.unchain.tech/learn/AVAX-AMM/
+チュートリアルページ old (2024 年 1 月 31 日まで): https://app.unchain.tech/learn/AVAX-AMM/
 
-チュートリアルページnew: https://github.com/unchain-tech/UNCHAIN-projects/tree/main/docs/AVAX-AMM/ja
+チュートリアルページ new: https://github.com/unchain-tech/UNCHAIN-projects/tree/main/docs/AVAX-AMM/ja
 
 ソースコード: avax-amm ディレクトリ
 
@@ -111,6 +111,21 @@ HTTPS_PROXY=http://proxyserver:8080
 1. Assets 画面の右下の View All Networks を選択
 1. Networks タブを選択
 1. Search で`LT0 Subnet`を検索して ⭐️ を選択してお気に入りに追加する
+
+### 7. ニーモニックから 16 進数の秘密鍵への変換
+
+1. 以下のレポジトリを git clone します
+   `git clone https://github.com/kazpot/convert-mnemonic-to-private-key`
+2. コマンドを実行してニーモニックを変換します
+
+```
+$ cd convert-mnemonic-to-private-key
+$ yarn insall
+$ node main.js "{mnemonic}"
+```
+
+3. `0x` で始まる鍵が出力されるので先頭の `0x` の部分を抜いてコントラクトのデプロイに必要な時に(Lesson3 のコントラクトをテストネットにデプロイしましょう) packages/contract 以下の.env に下記のように記述します
+   TEST_ACCOUNT_PRIVATE_KEY="YOUR_PRIVATE_KEY"
 
 ### Solidity 基礎
 
