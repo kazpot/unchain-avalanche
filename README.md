@@ -112,19 +112,13 @@ HTTPS_PROXY=http://proxyserver:8080
 1. Networks タブを選択
 1. Search で`LT0 Subnet`を検索して ⭐️ を選択してお気に入りに追加する
 
-### 7. ニーモニックから 16 進数の秘密鍵への変換
+### 7. Core Wallet から 16 進数の秘密鍵をエクスポート
 
-1. 以下のレポジトリを git clone します
-   `git clone https://github.com/kazpot/convert-mnemonic-to-private-key`
-2. コマンドを実行してニーモニックを変換します
-
-```
-$ cd convert-mnemonic-to-private-key
-$ yarn insall
-$ node main.js "{mnemonic}"
-```
-
-3. `0x` で始まる鍵が出力されるので先頭の `0x` の部分を抜いてコントラクトのデプロイに必要な時に(Lesson3 のコントラクトをテストネットにデプロイしましょう) packages/contract 以下の.env に下記のように記述します
+1. Core Wallet のトップ画面の上の真ん中に表示されているアカウント名を選択
+2. Main または Imported のタブを選択し各アカウントの右下にある...メニューを選択
+3. `Show Private Key` を選択
+4. パスワードを入力すると秘密鍵が 16 進数で表示される
+5. `0x` で始まる鍵が出力されるので先頭の `0x` の部分を抜いてコントラクトのデプロイに必要な時に(Lesson3 のコントラクトをテストネットにデプロイしましょう) packages/contract 以下の.env に下記のように記述します
    TEST_ACCOUNT_PRIVATE_KEY="YOUR_PRIVATE_KEY"
 
 ### Solidity 基礎
