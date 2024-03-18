@@ -13,6 +13,7 @@ if (process.env.TEST_ACCOUNT_PRIVATE_KEY === undefined) {
 
 const accessToken = process.env.RPC_TOKEN || "";
 const rpcUrl = process.env.RPC_URL || "";
+const chainId = process.env.CHAIN_ID || "";
 
 const config: HardhatUserConfig = {
   solidity: "0.8.17",
@@ -27,7 +28,7 @@ const config: HardhatUserConfig = {
     },
     test: {
       url: `${rpcUrl}?token=${accessToken}`,
-      chainId: 7158,
+      chainId: parseInt(chainId),
       accounts:
         process.env.TEST_ACCOUNT_PRIVATE_KEY !== undefined
           ? [process.env.TEST_ACCOUNT_PRIVATE_KEY]
