@@ -3,8 +3,8 @@ import { ethers } from "hardhat";
 async function sendNativeToken() {
   const [sender] = await ethers.getSigners();
 
-  const receiver = "0x7a8CEC8Ef52F76E6847c2F6F621002E4335c7f6e";
-  const amountInEther = "0.01";
+  const receiver = "0x5829c85e4c68c4f799EC3D4B68D3C4950fa2E815";
+  const amountInEther = "100";
   const tx = {
     to: receiver,
     value: ethers.utils.parseEther(amountInEther),
