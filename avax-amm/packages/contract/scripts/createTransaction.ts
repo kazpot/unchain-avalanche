@@ -19,8 +19,7 @@ async function createTransaction() {
 
   // get nonce on server side
   // const provider = new ethers.providers.JsonRpcProvider("YOUR_RPC_URL_HERE");
-  // const serverWallet = new ethers.Wallet(PRIVATE_KEY, provider);
-  // const nonce = await serverWallet.getTransactionCount();
+  // const nonce = await provider.getTransactionCount("WALLET_ADDRESS");
 
   const transaction = {
     to: USDC_ADDRESS,
